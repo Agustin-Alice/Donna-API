@@ -6,7 +6,7 @@ const webhooksRoutes = require("./routes/webhooks.routes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json()); // Soporte para JSON en requests
+app.use(express.json());
 app.use("/webhooks", webhooksRoutes);
 
 app.use((err, req, res, next) => {
