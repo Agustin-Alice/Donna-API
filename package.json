@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "docker-build": "docker build -t test.",
+    "docker-run": "docker run -p 3000:3000 test",
+    "docker-stop": "docker stop $(docker ps -q --filter ancestor=test)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
