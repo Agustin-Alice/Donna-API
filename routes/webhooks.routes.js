@@ -7,13 +7,13 @@ const {
 } = require("../controllers/webhooks.controller");
 
 // 📌 Endpoint para Store Redact (cuando una tienda es eliminada)
-router.post("/store-redact", handleStoreRedact);
+router.get("/store-redact", handleStoreRedact);
 
 // 📌 Endpoint para Customer Redact (cuando un cliente es eliminado)
-router.post("/customers-redact", handleCustomerRedact);
+router.get("/customers-redact", handleCustomerRedact);
 
 // 📌 Endpoint para Customer Data Request (cuando un cliente solicita sus datos)
-router.post("/customers-data-request", handleCustomerDataRequest);
+router.get("/customers-data-request", handleCustomerDataRequest);
 
 // 📌 Ruta de prueba
 router.get("/test", (req, res) => {
