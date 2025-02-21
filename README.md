@@ -1,6 +1,7 @@
 # Donna-API
 
- "scripts": {
-    "docker-build": build
-    "docker-run": start
-    "docker-stop": stop
+ scripts: {
+    "docker-build"
+    "docker-run"
+    "docker-stop"
+}
