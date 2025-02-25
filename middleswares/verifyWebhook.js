@@ -18,7 +18,6 @@ const verifyWebhook = (req, res, next) => {
       .createHmac("sha256", clientSecret)
       .update(payload, "utf8")
       .digest("hex");
-    console.log(calculatedSignature);
     // Comparar la firma recibida con la calculada
     if (signature !== calculatedSignature) {
       return res.status(403).json({ error: "Firma de webhook inválida" });
